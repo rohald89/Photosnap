@@ -7,14 +7,22 @@
   &--reverse {
     flex-direction: row-reverse;
   }
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 9;
+    }
+  }
 }
 .hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 42.5%;
   min-width: 495px;
+  flex: 1;
 
   &--light {
     background-color: $pure-white;
