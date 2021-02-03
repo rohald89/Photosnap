@@ -1,0 +1,19 @@
+.btn {
+  &-1 {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $pure-white;
+    text-decoration: none;
+    background-color: $pure-black;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $light-grey;
+      color: $pure-black;
+    }
+  }
+}

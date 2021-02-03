@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 72px;
+  width: 100%;
+
+  &__nav {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    &-link {
+      color: $pure-black;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $light-grey;
+      }
+    }
+  }
+}

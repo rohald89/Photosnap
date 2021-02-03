@@ -1,0 +1,35 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.heading {
+  &-1 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 4.16667px;
+    font-weight: bold;
+  }
+
+  &-2 {
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: 0;
+    font-weight: bold;
+  }
+
+  &-3 {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0;
+    font-weight: bold;
+  }
+
+  &-4 {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+}
