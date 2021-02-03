@@ -9,7 +9,15 @@
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 4.16667px;
+    margin: 0;
     font-weight: bold;
+    text-transform: uppercase;
+    &--light {
+      color: $pure-white;
+    }
+    &--dark {
+      color: $pure-black;
+    }
   }
 
   &-2 {
@@ -31,5 +39,25 @@
     line-height: 16px;
     letter-spacing: 2px;
     font-weight: bold;
+    text-transform: uppercase;
+
+    &--light {
+      color: $pure-white;
+    }
+  }
+}
+
+.paragraph {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.6;
+  margin-top: 21px;
+  margin-bottom: 48px;
+  &--light {
+    color: $pure-white;
+  }
+  &--dark {
+    color: $pure-black;
   }
 }

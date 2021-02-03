@@ -16,4 +16,40 @@
       color: $pure-black;
     }
   }
+
+  &-2 {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+
+    &--light {
+      color: $pure-white;
+      &:after {
+        filter: invert(100%);
+      }
+    }
+
+    &--dark {
+      color: $pure-black;
+    }
+
+    &::after {
+      content: url('../assets/shared/desktop/arrow.svg');
+
+      height: 12px;
+      width: 42px;
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translate(58px, -50%);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

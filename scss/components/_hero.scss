@@ -1,0 +1,30 @@
+.hero {
+  display: flex;
+  height: 600px;
+  &--home {
+    height: 650px;
+  }
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42.5%;
+  min-width: 495px;
+
+  &--light {
+    background-color: $pure-white;
+  }
+
+  &--dark {
+    background-color: $pure-black;
+  }
+}
+
+.hero-content {
+  width: 387px;
+}

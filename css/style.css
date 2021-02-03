@@ -321,7 +321,13 @@ template {
   font-size: 40px;
   line-height: 48px;
   letter-spacing: 4.16667px;
-  font-weight: bold; }
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .heading-1--light {
+    color: #fff; }
+  .heading-1--dark {
+    color: #000; }
 
 .heading-2 {
   font-size: 24px;
@@ -339,7 +345,22 @@ template {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 2px;
-  font-weight: bold; }
+  font-weight: bold;
+  text-transform: uppercase; }
+  .heading-4--light {
+    color: #fff; }
+
+.paragraph {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.6;
+  margin-top: 21px;
+  margin-bottom: 48px; }
+  .paragraph--light {
+    color: #fff; }
+  .paragraph--dark {
+    color: #000; }
 
 .btn-1 {
   font-size: 12px;
@@ -355,6 +376,31 @@ template {
   .btn-1:hover {
     background-color: #dfdfdf;
     color: #000; }
+
+.btn-2 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative; }
+  .btn-2--light {
+    color: #fff; }
+    .btn-2--light:after {
+      filter: invert(100%); }
+  .btn-2--dark {
+    color: #000; }
+  .btn-2::after {
+    content: url("../assets/shared/desktop/arrow.svg");
+    height: 12px;
+    width: 42px;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(58px, -50%); }
+  .btn-2:hover {
+    text-decoration: underline; }
 
 .header {
   display: flex;
@@ -377,3 +423,26 @@ template {
       transition: all 0.3s ease; }
       .header__nav-link:hover {
         color: #dfdfdf; }
+
+.hero {
+  display: flex;
+  height: 600px; }
+  .hero--home {
+    height: 650px; }
+  .hero--reverse {
+    flex-direction: row-reverse; }
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42.5%;
+  min-width: 495px; }
+  .hero-container--light {
+    background-color: #fff; }
+  .hero-container--dark {
+    background-color: #000; }
+
+.hero-content {
+  width: 387px; }
