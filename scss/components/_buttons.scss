@@ -24,7 +24,7 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    position: relative;
+    display: inline-flex;
 
     &--light {
       color: $pure-white;
@@ -42,10 +42,7 @@
 
       height: 12px;
       width: 42px;
-      position: absolute;
-      top: 50%;
-      right: 0px;
-      transform: translate(58px, -50%);
+      margin-left: 18px;
     }
 
     &:hover {

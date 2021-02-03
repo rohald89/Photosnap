@@ -387,7 +387,7 @@ template {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative; }
+  display: inline-flex; }
   .btn-2--light {
     color: #fff; }
     .btn-2--light:after {
@@ -398,10 +398,7 @@ template {
     content: url("../assets/shared/desktop/arrow.svg");
     height: 12px;
     width: 42px;
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    transform: translate(58px, -50%); }
+    margin-left: 18px; }
   .btn-2:hover {
     text-decoration: underline; }
 
@@ -502,11 +499,9 @@ template {
       line-height: 17px;
       width: 100%; }
   .story-card .btn-2 {
-    display: inline-block;
     width: 100%;
-    margin-top: 20px; }
-    .story-card .btn-2:after {
-      transform: translate(0, -50%); }
+    margin-top: 20px;
+    justify-content: space-between; }
   .story-card .gradient {
     position: absolute;
     bottom: 0;
@@ -547,7 +542,10 @@ template {
   grid-row: 2/3;
   grid-column: 1/2;
   justify-self: self-start;
-  align-self: self-end; }
+  align-self: self-end;
+  width: 154px;
+  display: flex;
+  justify-content: space-between; }
 
 .footer__nav {
   grid-row: 1/3;

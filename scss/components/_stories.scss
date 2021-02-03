@@ -42,13 +42,9 @@
   }
 
   .btn-2 {
-    display: inline-block;
     width: 100%;
     margin-top: 20px;
-
-    &:after {
-      transform: translate(0, -50%);
-    }
+    justify-content: space-between;
   }
 
   .gradient {
