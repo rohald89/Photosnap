@@ -1,0 +1,24 @@
+.features {
+  margin: 120px 160px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  //   justify-content: space-between;
+}
+
+.feature {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+
+  &__content {
+    .paragraph {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    margin: auto;
+  }
+}

@@ -506,3 +506,19 @@ template {
     transform: translateY(-24px); }
     .story-card:hover .gradient {
       width: 100%; }
+
+.features {
+  margin: 120px 160px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
+
+.feature {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr; }
+  .feature__content .paragraph {
+    margin: 0; }
+  .feature__img {
+    margin: auto; }
