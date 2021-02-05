@@ -5,11 +5,17 @@
     line-height: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: $pure-white;
     text-decoration: none;
-    background-color: $pure-black;
     padding: 12px 24px;
     transition: all 0.3s ease;
+    &--dark {
+      color: $pure-white;
+      background-color: $pure-black;
+    }
+    &--light {
+      color: $pure-black;
+      background-color: $pure-white;
+    }
 
     &:hover {
       background-color: $light-grey;

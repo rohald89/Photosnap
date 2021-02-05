@@ -25,6 +25,12 @@
     line-height: 25px;
     letter-spacing: 0;
     font-weight: bold;
+    &--dark {
+      color: $pure-black;
+    }
+    &--light {
+      color: $pure-white;
+    }
   }
 
   &-3 {

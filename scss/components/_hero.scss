@@ -4,6 +4,11 @@
   &--home {
     height: 650px;
   }
+  &--pricing,
+  &--features {
+    height: 490px;
+  }
+
   &--reverse {
     flex-direction: row-reverse;
   }
@@ -16,7 +21,9 @@
     }
   }
 
-  &--home .hero-content:before {
+  &--home .hero-content:before,
+  &--features .hero-content:before,
+  &--pricing .hero-content:before {
     content: '';
     position: absolute;
     top: 0;
