@@ -1,9 +1,18 @@
+.features-main {
+  & .hero p {
+    margin-bottom: 0;
+  }
+
+  & .feature {
+    // margin-bottom: 104px;
+  }
+}
+
 .features {
   margin: 120px 160px;
   display: grid;
-  gap: 30px;
+  gap: 104px 30px;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  //   justify-content: space-between;
 }
 
 .feature {
@@ -20,5 +29,20 @@
 
   &__img {
     margin: auto;
+  }
+}
+
+.beta {
+  background: url(../assets/shared/desktop/bg-beta.jpg);
+}
+
+.beta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 68px 165px;
+
+  & .heading-1 {
+    max-width: 400px;
   }
 }

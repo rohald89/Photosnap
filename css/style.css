@@ -546,10 +546,13 @@ template {
     .story-card:hover .gradient {
       width: 100%; }
 
+.features-main .hero p {
+  margin-bottom: 0; }
+
 .features {
   margin: 120px 160px;
   display: grid;
-  gap: 30px;
+  gap: 104px 30px;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
 
 .feature {
@@ -561,6 +564,17 @@ template {
     margin: 0; }
   .feature__img {
     margin: auto; }
+
+.beta {
+  background: url(../assets/shared/desktop/bg-beta.jpg); }
+
+.beta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 68px 165px; }
+  .beta-content .heading-1 {
+    max-width: 400px; }
 
 .footer {
   background-color: #000;
