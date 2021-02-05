@@ -566,7 +566,18 @@ template {
     margin: auto; }
 
 .beta {
-  background: url(../assets/shared/desktop/bg-beta.jpg); }
+  background: url(../assets/shared/desktop/bg-beta.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .beta:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 6px;
+    background-image: linear-gradient(to top right, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%); }
 
 .beta-content {
   display: flex;

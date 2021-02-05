@@ -34,6 +34,19 @@
 
 .beta {
   background: url(../assets/shared/desktop/bg-beta.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 6px;
+    background-image: $main-accent;
+  }
 }
 
 .beta-content {
