@@ -19,7 +19,7 @@
     opacity: 0.5;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1150px) {
     margin: 120px auto;
   }
 }
@@ -30,7 +30,7 @@
   align-items: center;
   margin-top: 48px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1150px) {
     flex-direction: column;
   }
 }
@@ -44,27 +44,31 @@
   justify-content: center;
   padding: 40px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 550px) and (max-width: 1150px) {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 24px;
   }
 
+  @media screen and (max-width: 550px) {
+    margin: 12px auto;
+  }
+
   &__desc {
     & * {
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 550px) and (max-width: 768px) {
         text-align: left;
       }
     }
   }
 
   &__price {
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 550px) and (max-width: 768px) {
       justify-self: self-end;
       align-self: self-start;
     }
     & .paragraph {
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 550px) and (max-width: 768px) {
         text-align: right;
       }
     }
@@ -78,7 +82,7 @@
     height: 470px;
     position: relative;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1150px) {
       height: auto;
     }
 
@@ -90,7 +94,7 @@
       width: 100%;
       height: 6px;
       background-image: $main-accent;
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 550px) and (max-width: 768px) {
         width: 6px;
         height: 100%;
       }
@@ -115,6 +119,9 @@
 
   &:not(:last-child) {
     margin-right: 30px;
+    @media screen and (max-width: 1150px) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -167,42 +174,84 @@
   }
 }
 
-.compare {
+.compare--desktop {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.compare-table {
-  width: 731px;
-  margin-top: 56px;
-  margin-bottom: 160px;
-
-  &__row {
-    display: flex;
-    align-items: center;
-    height: 62px;
-    border-bottom: 1px solid $light-grey;
-
-    &--heading {
-      border-bottom: 1px solid $pure-black;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 
-  &__col {
-    flex: 0 1 19%;
-    text-align: center;
-    &--desc {
-      flex: 0 1 44%;
-      margin-left: 24px;
+  .compare-table {
+    width: 731px;
+    margin-top: 56px;
+    margin-bottom: 160px;
+
+    &__row {
+      display: flex;
+      align-items: center;
+      height: 62px;
+      border-bottom: 1px solid $light-grey;
+
+      &--heading {
+        border-bottom: 1px solid $pure-black;
+      }
     }
 
-    &--checked {
-      height: 100%;
-      background-image: url(../assets/pricing/desktop/check.svg);
-      background-size: 16px;
-      background-position: center;
-      background-repeat: no-repeat;
+    &__col {
+      flex: 0 1 19%;
+      text-align: center;
+      &--desc {
+        flex: 0 1 44%;
+        margin-left: 24px;
+      }
+
+      &--checked {
+        height: 100%;
+        background-image: url(../assets/pricing/desktop/check.svg);
+        background-size: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.compare--mobile {
+  width: 90%;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .compare-table {
+    &__row {
+      border-bottom: 1px solid $light-grey;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 44px 28px 40px;
+
+      & .paragraph {
+        margin: 0;
+      }
+      &--heading {
+        border-bottom: 1px solid $pure-black;
+      }
+    }
+
+    &__col {
+      &--desc {
+        grid-column: 1/4;
+        grid-row: 1/2;
+      }
+      &--checked {
+        height: 15px;
+        background-image: url(../assets/pricing/desktop/check.svg);
+        background-size: 16px;
+        background-position: left;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
