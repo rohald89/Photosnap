@@ -18,6 +18,11 @@
     &--dark {
       color: $pure-black;
     }
+
+    @media screen and (max-width: 767px) {
+      font-size: 32px;
+      letter-spacing: 3.333px;
+    }
   }
 
   &-2 {
@@ -49,6 +54,9 @@
 
     &--light {
       color: $pure-white;
+    }
+    &--dark {
+      color: $pure-black;
     }
   }
 }

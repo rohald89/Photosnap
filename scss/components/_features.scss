@@ -1,18 +1,36 @@
+.home .features {
+  @media only screen and (max-width: 768px) {
+    gap: 80px;
+    grid-template-columns: 1fr;
+    max-width: 547px;
+  }
+}
+
 .features-main {
   & .hero p {
     margin-bottom: 0;
   }
-
-  & .feature {
-    // margin-bottom: 104px;
-  }
 }
 
 .features {
-  margin: 120px 160px;
+  max-width: 1110px;
+  margin: 120px auto;
   display: grid;
-  gap: 104px 30px;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  @media only screen and (max-width: 900px) {
+    gap: 72px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 690px;
+    width: 80%;
+  }
+  @media only screen and (max-width: 767px) {
+    gap: 72px;
+    grid-template-columns: 1fr;
+    width: 80%;
+    min-width: 310px;
+  }
 }
 
 .feature {
@@ -38,6 +56,12 @@
   background-position: center;
   position: relative;
 
+  @media only screen and (max-width: 650px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -54,8 +78,27 @@
   align-items: center;
   justify-content: space-between;
   padding: 68px 165px;
+  @media only screen and (max-width: 1200px) {
+    padding: 68px 90px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    padding: 68px 40px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 64px 32px;
+  }
 
   & .heading-1 {
     max-width: 400px;
+
+    @media only screen and (max-width: 650px) {
+      margin-bottom: 24px;
+      font-size: 32px;
+      letter-spacing: 3.33px;
+    }
   }
 }
