@@ -41,12 +41,13 @@
   @media screen and (max-width: 700px) {
     flex-direction: column;
     height: 720px;
+    &--pricing,
+    &--features {
+      height: 600px;
+    }
 
     &__img {
       height: 300px;
-    }
-    &-container {
-      height: 419px;
     }
   }
 }

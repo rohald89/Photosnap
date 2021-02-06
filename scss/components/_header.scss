@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -23,5 +24,59 @@
         color: $light-grey;
       }
     }
+  }
+  @media screen and (max-width: 700px) {
+    justify-content: flex-start;
+    &.active {
+      height: 325px;
+      flex-direction: column;
+      align-items: stretch;
+
+      .header__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 20px auto;
+        border-bottom: 1px solid $light-grey;
+        &-link {
+          margin: 10px auto;
+        }
+        &-invite {
+          display: initial;
+          text-align: center;
+          margin: 20px auto;
+          width: 90%;
+        }
+      }
+
+      .header__logo {
+        margin-top: 28px;
+      }
+    }
+
+    &__logo {
+      margin-left: 24px;
+    }
+    &__nav {
+      display: none;
+      &-invite {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  background-color: grey;
+  display: none;
+
+  @media screen and (max-width: 700px) {
+    display: block;
   }
 }

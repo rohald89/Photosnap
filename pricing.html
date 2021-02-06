@@ -23,7 +23,14 @@
     
   </header>
 <main class="pricing-main">
-  <div class="hero hero--pricing">
+  <div class="hero hero--pricing hero--reverse">
+    <div class="hero__img">
+      <picture>
+        <source srcset="./assets/pricing/mobile/hero.jpg" media="(max-width: 700px)"/>
+        <source srcset="./assets/pricing/tablet/hero.jpg" media="(max-width: 1000px)"/>
+        <img src="./assets/pricing/desktop/hero.jpg" alt="Photographer overlooking a lake">
+      </picture>
+    </div>
     <div class="hero-container hero-container--dark">
       <div class="hero-content">
         <div class="container">
@@ -34,9 +41,6 @@
           </p>
         </div>
       </div>        
-    </div>
-    <div class="hero__img">
-      <img src="./assets/pricing/desktop/hero.jpg" alt="Photographer overlooking a lake">
     </div>
   </div>
   
