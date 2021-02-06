@@ -1,13 +1,14 @@
 .hero {
   display: flex;
   height: 600px;
-  margin-top: 72px;
   &--home {
     height: 650px;
+    margin-top: 72px;
   }
   &--pricing,
   &--features {
     height: 490px;
+    margin-top: 72px;
   }
 
   &--reverse {
