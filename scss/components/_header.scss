@@ -82,6 +82,18 @@
       .header__logo {
         // margin-top: 28px;
       }
+      .menu {
+        span {
+          &::before {
+            top: 10px;
+            transform: rotate(45deg);
+          }
+          &::after {
+            top: 10px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
     }
 
     &__logo {
@@ -102,13 +114,36 @@
 }
 
 .menu {
-  position: absolute;
-  top: 24px;
-  right: 20px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
   height: 20px;
   width: 20px;
-  background-color: grey;
   display: none;
+
+  span {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 20px;
+      background-color: $pure-black;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+    &::before {
+      top: 7px;
+    }
+    &::after {
+      top: 13px;
+    }
+  }
 
   @media screen and (max-width: 700px) {
     display: block;
