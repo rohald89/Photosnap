@@ -44,12 +44,14 @@
 }
 
 .story-card {
+  box-sizing: border-box;
   position: relative;
   height: 100%;
   width: 25%;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  margin-bottom: -8px;
   &:before {
     content: '';
     position: absolute;
@@ -64,9 +66,18 @@
     width: 50%;
   }
 
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
+  picture {
+    img {
+      display: block;
+    }
+  }
   &__container {
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     left: 0;
     width: 100%;
     padding: 40px;
@@ -101,7 +112,7 @@
     bottom: 0;
     left: 0;
     height: 6px;
-    width: 0;
+    width: 0%;
     background-image: $main-accent;
     transition: all 0.3s ease;
   }
