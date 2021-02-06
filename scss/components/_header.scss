@@ -1,10 +1,32 @@
+.overlay {
+  z-index: 10;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $pure-black;
+  opacity: 0;
+}
+
+.header.active + .overlay {
+  display: block;
+  opacity: 0.8;
+}
+
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 72px;
   width: 100%;
+  background-color: $pure-white;
+  transition: all 0.2s ease-in-out;
+  z-index: 99;
 
   &__nav {
     width: 270px;
@@ -26,6 +48,7 @@
     }
   }
   @media screen and (max-width: 700px) {
+    padding-top: 72px;
     justify-content: flex-start;
     &.active {
       height: 325px;
@@ -34,16 +57,22 @@
 
       .header__nav {
         display: flex;
+        opacity: 1;
+        visibility: visible;
         flex-direction: column;
         align-items: center;
         width: 90%;
         margin: 20px auto;
         border-bottom: 1px solid $light-grey;
+        transition: all 0.4s ease-in-out;
         &-link {
           margin: 10px auto;
         }
         &-invite {
+          transition: all 0.4s ease-in-out;
           display: initial;
+          opacity: 1;
+          visibility: visible;
           text-align: center;
           margin: 20px auto;
           width: 90%;
@@ -51,17 +80,22 @@
       }
 
       .header__logo {
-        margin-top: 28px;
+        // margin-top: 28px;
       }
     }
 
     &__logo {
-      margin-left: 24px;
+      // margin-left: 24px;
+      position: absolute;
+      top: 28px;
+      left: 24px;
     }
     &__nav {
-      display: none;
+      opacity: 0;
+      visibility: none;
       &-invite {
-        display: none;
+        opacity: 0;
+        visibility: none;
       }
     }
   }

@@ -12,16 +12,21 @@
 </head>
 <body>
 
+
   <header class="header">
+    
     <a href="./index.html"><img src="assets/shared/desktop/logo.svg" alt="Photosnap Logo" class="header__logo"></a>
     <nav class="header__nav">
       <a href="./stories.html" class="header__nav-link">Stories</a>
       <a href="./features.html" class="header__nav-link">Features</a>
       <a href="./pricing.html" class="header__nav-link">Pricing</a>
     </nav>
-    <a href="#" class="btn-1 btn-1--dark">Get an Invite</a>
-    
+    <a href="#" class="btn-1 btn-1--dark header__nav-invite">Get an Invite</a>
+    <div class="menu"></div>
   </header>
+  <div class="overlay"></div>
+
+
 <main class="pricing-main">
   <div class="hero hero--pricing hero--reverse">
     <div class="hero__img">
@@ -65,8 +70,8 @@
           </p>  
         </div>
         <div class="pricing-plan__price">
-          <h1 class="heading-1 heading-1--dark">$19.00</h1>
-          <p class="paragraph paragraph--dark">
+          <h1 class="heading-1 heading-1--dark" id="price-basic">$19.00</h1>
+          <p class="paragraph paragraph--dark period">
             per month
           </p>
         </div>
@@ -83,8 +88,8 @@
         </p>
       </div>
       <div class="pricing-plan__price">
-        <h1 class="heading-1 heading-1--light">$39.00</h1>
-        <p class="paragraph paragraph--light">
+        <h1 class="heading-1 heading-1--light" id="price-pro">$39.00</h1>
+        <p class="paragraph paragraph--light period">
           per month
         </p>
       </div>
@@ -99,8 +104,8 @@
         </p>
       </div>
       <div class="pricing-plan__price">
-        <h1 class="heading-1 heading-1--dark">$99.00</h1>
-        <p class="paragraph paragraph--dark">
+        <h1 class="heading-1 heading-1--dark" id="price-business">$99.00</h1>
+        <p class="paragraph paragraph--dark period">
           per month
         </p>
       </div>
@@ -340,6 +345,6 @@
     <a href="#" class="footer__invite btn-2 btn-2--light">Get an invite</a>
     <p class="copyright paragraph paragraph--light">Copyright 2021. All Rights Reserved</p>
   </footer>
-
+  <script src="app.js"></script>
 </body>
 </html>

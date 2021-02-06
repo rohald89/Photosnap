@@ -1,23 +1,41 @@
 .stories-header {
   width: 100%;
+  margin-top: 72px;
   height: 650px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 100%),
-    url(../assets/stories/desktop/moon-of-appalacia.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: $pure-black;
   display: flex;
   align-items: center;
+  position: relative;
 
-  @media only screen and (max-width: 768px) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 100%),
-      url(../assets/stories/tablet/moon-of-appalacia.jpg);
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  & .hero__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    @media only screen and (max-width: 600px) {
+      position: static;
+      width: 100%;
+    }
   }
 
   &__container {
+    z-index: 2;
     width: 387px;
     color: $pure-white;
     margin-left: 112px;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
     & .heading-4 {
       margin: 0 0 24px 0;

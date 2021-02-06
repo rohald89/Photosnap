@@ -22,6 +22,9 @@
   @media screen and (max-width: 1150px) {
     margin: 120px auto;
   }
+  @media screen and (max-width: 1150px) {
+    margin: 60px auto;
+  }
 }
 
 .pricing-plans {
@@ -51,7 +54,8 @@
   }
 
   @media screen and (max-width: 550px) {
-    margin: 12px auto;
+    width: 95%;
+    margin: 12px 0;
   }
 
   &__desc {
@@ -79,7 +83,7 @@
   }
   &--pro {
     background-color: $pure-black;
-    height: 470px;
+    padding: 69px 40px;
     position: relative;
 
     @media screen and (max-width: 1150px) {
